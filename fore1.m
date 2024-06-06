@@ -3,7 +3,7 @@ clear;clc;close all
 FontSize = 22;
 FontWeight = 'bold';
 %raw_data_address
-
+%Please use .dst file
 [ Atom_info, AtomNum, ~, CubePoints, step_num, step, vStart ] = Func_GetCubePoints( strFile );
 [ Atom_info1, AtomNum1, ~, CubePoints1, step_num1, step1, vStart1 ] = Func_GetCubePoints( strFile1 );
 load LUT;
