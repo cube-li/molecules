@@ -26,8 +26,8 @@ if(((Min_X>Max_X1)||(Min_Y>Max_Y1))||((Max_X<Min_X1)||(Max_Y<Min_Y1))
 end
 
 if(Flag==1)  
-   [mLine,iCountContour,vContourPoint,LineFlag] = Func_Unicursal_4(vXTemp, vYTemp, dSlice,[0.8235,0.1255,0.1529]); 
-   [mLine1,iCountContour1,vContourPoint1,LineFlag1] = Func_Unicursal_4(vXTemp1, vYTemp1, step1(1),[0.2196,0.3490,0.5373]);  
+  %use INPS to get contours and split multiple contours groups
+  % [mLine1=contours,iCountContour1=number of contours,vContourPoint1= number of points in every contour,LineFlag1=contained time]
     if iCountContour>1&&iCountContour1==1  
        [mLineSub,vRectangle]=Func_GetSubline(mLine,iCountContour,vContourPoint,vXTemp, vYTemp);
         for num_c=1:iCountContour
